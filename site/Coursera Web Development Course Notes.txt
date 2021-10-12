@@ -1,0 +1,30 @@
+Block level elements render on a new line
+ - may contain inline or other block-level elements.
+ - Roughly translate into Flow Content(HTML5 category)
+
+Inline elements render on the same line.
+ - may only contain other inline elements.
+ - Roughly translate into Phrasing Content(HTML5 category) 
+ 
+ 
+ HTML5 replaces these definitions with a more complex set of content categories
+ However, this distinction remains practical because it aligns well with existing css rules.
+ 
+ 
+#menu-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid black;
+  
+}
+ 
+<div class="col-md-4 col-sm-6 col-xs-12">
+    <a href="menu-categories.html"><div id="menu-tile"><span>Menu
+    </span></div></a>
+</div>
+
+The "width: 100%;" in the style declaration is saying that we want the width of the div with id="menu-tile" 
+and everything that it encompases to be 100% of the width of the container that encompases the div with id="menu-tile" 
+which in this case is <div class="col-md-4 col-sm-6 col-xs-12">  
